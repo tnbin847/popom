@@ -1,0 +1,46 @@
+#
+# 공통 스프링 프로파일(Profile) 파일
+#
+
+## 스프링 설정
+spring:
+  config:
+    activate:
+      on-profile:
+        - common
+  main:
+    banner-mode: off  # 런타임시 콘솔 상에 출력되는 배너 끄기
+  # 타임리프 설정 : 화면 파일 수정시 재시작이 아닌 웹 브라우저 새로고침 후 적용을 위한 설정
+  thymeleaf:
+    prefix: file:src/main/resources/templates/
+    suffix: .html
+    cache: false  # 타임리프에 대한 캐시를 남기지 않는다. 개발 완료 후 운영 시에는 true값으로 변경한다.
+  # 웹 정적 리소스 설정 : 화면 파일 수정시 재시작이 아닌 웹 브라우저의 새로고침 후 적용을 위한 설정
+  web:
+    resources:
+      static-locations:
+        - file:src/main/resources/static/
+
+## 마이바티스 설정
+mybatis:
+  # 마이바티스 동작 방식 설정
+  configuration:
+    cache-enabled: false
+    map-underscore-to-camel-case: true
+    call-setters-on-nulls: true
+    jdbc-type-for-null: NULL
+    local-cache-scope: STATEMENT
+  # DB 작업을 위한 자바 클래스 매핑시 클래스명만 작성할 수 있도록 패키지 경로 지정
+  type-aliases-package: com.tnbin.popom.domain.**.dto
+  # 타입 핸들러 클래스 등록
+  type-handlers-package: com.tnbin.popom.global.common.mybatis
+
+## 내장 톰캣 서버 설정
+server:
+  port: 9206  # 포트 번호 변경
+  servlet:
+    # HTTP 요청 및 응답의 인코딩 설정 : 한글화 처리
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true

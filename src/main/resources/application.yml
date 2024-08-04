@@ -1,0 +1,9 @@
+#
+# 환경별 프로파일 분리 
+#   - application-*.yml 파일들을 환경별 그룹화 관리
+#
+
+spring:
+  profiles:
+    group:
+      dev: common, dev

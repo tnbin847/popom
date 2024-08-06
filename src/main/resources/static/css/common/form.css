@@ -1,0 +1,216 @@
+@charset "utf-8";
+
+/***********************************************************************************************************************
+ * form.css
+ *  : explain about this file..
+ *  - explain...
+ *
+ *  @author     Park Su Bin
+ *  @version    1.0.0
+ **********************************************************************************************************************/
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+*   >> 폼 요소(FORM)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.form {
+    line-height: 1;
+}
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+*   >> 폼 내부 레이아웃 (FORM LAYOUT)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.field {
+    margin-bottom: var(--space-sm);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.field.is-grouped {
+    margin: var(--space-md) 0;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.has-addons {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+*   >> 폼 내부 요소 (FORM ELEMENT)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.label {
+    display: block;
+    margin-bottom: var(--space-xxs);
+    color: var(--color-secondary);
+    font-family: 'Pretendard-Medium', sans-serif;
+    font-size: var(--text-base);
+    font-weight: 600;
+}
+
+/* TEXT-FIELDS : INPUT */
+.input {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding: var(--space-xs);
+    border-radius: var(--border-radius-width);
+    border: 1px solid var(--color-border);
+    background-color: var(--color-white);
+
+    &:focus-within {
+        border-color: var(--color-primary);
+    }
+
+    /* INNER INPUT ELEMENT */
+    & > input {
+        width: 100%;
+        height: var(--inner-element-height);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

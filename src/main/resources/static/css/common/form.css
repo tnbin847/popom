@@ -2,8 +2,10 @@
 
 /***********************************************************************************************************************
  * form.css
- *  : explain about this file..
- *  - explain...
+ *  : 폼 및 폼 내부 요소 스타일
+ *  - 폼 요소 (FORM)
+ *  - 폼 내부 레이아웃 (FORM LAYOUT)
+ *  - 폼 내부 요소 (FORM ELEMENT)
  *
  *  @author     Park Su Bin
  *  @version    1.0.0
@@ -53,7 +55,7 @@
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 .label {
     display: block;
-    margin-bottom: var(--space-xxs);
+    margin-bottom: var(--space-unit);
     color: var(--color-secondary);
     font-family: 'Pretendard-Medium', sans-serif;
     font-size: var(--text-base);
@@ -62,11 +64,7 @@
 
 /* TEXT-FIELDS : INPUT */
 .input {
-    display: block;
-    position: relative;
-    box-sizing: border-box;
     width: 100%;
-    padding: var(--space-xs);
     border-radius: var(--border-radius-width);
     border: 1px solid var(--color-border);
     background-color: var(--color-white);

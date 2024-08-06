@@ -3,7 +3,8 @@
 /***********************************************************************************************************************
  * component.css
  *  : 주요 컴포넌트들에 대한 스타일
- *  - explain...
+ *  - 텍스트 스타일 (TEXT STYLE)
+ *  - 버튼 (BUTTON)
  *
  *  @author     Park Su Bin
  *  @version    1.0.0
@@ -11,7 +12,7 @@
 
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-*   >> 텍스트 스타일 (TEXT)
+*   >> 텍스트 스타일 (TEXT STYLE)
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 /* BY COLORIZED */
 .text-primary {
@@ -54,7 +55,7 @@ hr {
 
 /* HELP TEXT */
 .help-block {
-    margin-bottom: var(--space-xxs);
+    margin-bottom: var(--space-unit);
     color: var(--color-gray);
     font-size: var(--text-sm);
 }
@@ -65,11 +66,9 @@ hr {
 *   >> 버튼 (BUTTON)
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 .button {
-    display: block;
-    position: relative;
-    box-sizing: border-box;
-    padding: var(--space-xs);
     border-radius: var(--border-radius-width);
+    border-width: 1px;
+    border-style: solid;
 
     /* INNER BUTTON ELEMENT */
     & > button {
@@ -79,20 +78,25 @@ hr {
         color: inherit;
         font-family: 'Pretendard-Medium', sans-serif;
         font-size: var(--text-base);
-        font-weight: 600;
     }
 
     /* BY COLORIZED */
     &.is-primary {
-        border: 1px solid var(--color-primary);
+        border-color: var(--color-primary);
         background-color: var(--color-primary);
         color: var(--color-white);
     }
 
     &.is-secondary {
-        border: 1px solid var(--color-secondary);
+        border-color: var(--color-secondary);
         background-color: var(--color-secondary);
         color: var(--color-white);
+    }
+
+    /* OTHERS */
+    &.is-static {
+        width: 128px;
+        margin-left: var(--space-unit);
     }
 }
 
@@ -105,7 +109,7 @@ hr {
 }
 
 .is-kakao {
-    border: 1px solid var(--color-background-kakao);
+    border-color: var(--color-background-kakao);
     background-color: var(--color-background-kakao);
     color: var(--color-text-kakao);
 
@@ -115,7 +119,7 @@ hr {
 }
 
 .is-google {
-    border: 1px solid var(--color-background-google);
+    border-color: var(--color-background-google);
     background-color: var(--color-background-google);
     color: var(--color-text-google);
 

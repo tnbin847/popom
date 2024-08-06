@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>POPOM</title>
     <th:block th:replace="common/layout/fragments/head :: headLib"/>
+    <link rel="stylesheet" href="/css/popom/index.css">
 </head>
 <body>
     <div id="wrapper">
@@ -14,18 +15,18 @@
                     <div class="field is-grouped">
                         <div class="field">
                             <label for="loginId" class="label">아이디</label>
-                            <span class="input">
+                            <span class="box-padding input">
                                 <input type="text" name="loginId" id="loginId" class="box" autofocus>
                             </span>
                         </div>
                         <div class="field">
                             <label for="password" class="label">비밀번호</label>
-                            <span class="input">
+                            <span class="box-padding input">
                                 <input type="password" name="password" id="password" class="box" autocomplete="off">
                             </span>
                         </div>
                         <div class="field">
-                            <span class="button is-primary">
+                            <span class="box-padding button is-primary">
                                 <button type="button" id="loginBtn" class="box">로그인</button>
                             </span>
                         </div>
@@ -40,12 +41,12 @@
                     <hr>
                     <div class="field is-grouped">
                         <div class="field">
-                            <span class="button is-kakao">
+                            <span class="box-padding button is-kakao">
                                 <button type="button" id="kakaoBtn" class="box">카카오 계정으로 로그인</button>
                             </span>
                         </div>
                         <div class="field">
-                            <span class="button is-google">
+                            <span class="box-padding button is-google">
                                 <button type="button" id="googleBtn" class="box">구글 계정으로 로그인</button>
                             </span>
                         </div>

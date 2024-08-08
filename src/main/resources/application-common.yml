@@ -34,6 +34,9 @@ mybatis:
   type-aliases-package: com.tnbin.popom.domain.**.dto
   # 타입 핸들러 클래스 등록
   type-handlers-package: com.tnbin.popom.global.common.mybatis
+  # 매퍼 파일(XML)의 경로 지정
+  mapper-locations:
+    - classpath:mappers/**/*_mapper.xml
 
 ## 내장 톰캣 서버 설정
 server:

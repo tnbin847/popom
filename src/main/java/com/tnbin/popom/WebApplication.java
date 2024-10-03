@@ -25,12 +25,12 @@ public class WebApplication {
 
 	@GetMapping("/find-id")
 	public String findId() {
-		return "popom/user/find-id";
+		return "popom/user/find_id";
 	}
 
 	@GetMapping("/find-pwd")
 	public String findPwd() {
-		return "popom/user/find-pwd";
+		return "popom/user/find_pwd";
 	}
 
 }

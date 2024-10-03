@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+:root {
+    --primary-color: #526B87;
+    --secondary-color: #464656;
+    --success-color: #18B57A;
+    --warning-color: #FCBF66;
+    --danger-color: #E15F68;
+    --link-color: #449BFE;
+    --dark-color: #2E3648;
+    --light-color: #F7FAFC;
+    --border-color: #CDD8DF;
+
+    --white: #FFFFFF;
+    --gray: #ADB5BF;
+    --black: #000000;
+
+    --kakao-primary-color: #FEE500;
+    --kakao-secondary-color: #181600;
+    --background-color: #FAFBFD;
+
+
+    --text-base: 13px;
+    --text-sm: 12px;
+    --text-md: 16px;
+    --text-lg: 22px;
+    --text-xl: 28px;
+    --text-xxl: 34px;
+    --text-xxxl: 40px;
+
+
+    --icon-base: 12px;
+    --icon-sm: 10px;
+    --icon-md: 14px;
+    --icon-lg: 18px;
+    --icon-xl: 26px;
+    --icon-xxl: 34px;
+
+
+    --space-unit: 4px;
+
+    --space-xxxs: calc(var(--space-unit) - 2px);
+    --space-xxs: calc(var(--space-unit) + 2px);
+    --space-xs: calc(var(--space-unit) + 4px);
+    --space-sm: calc(var(--space-unit) + 8px);
+    --space-md: calc(var(--space-unit) + 12px);
+    --space-lg: calc(var(--space-unit) + 16px);
+    --space-xl: calc(var(--space-unit) + 20px);
+    --space-xxl: calc(var(--space-unit) + 24px);
+    --space-xxxl: calc(var(--space-unit) + 28px);
+
+
+    --border-radius: 2px;
+    --contain-intrinsic-height: px;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common/layout/fragment/head :: head_fragment"></head>
+<link rel="stylesheet" href="/css/popom/user.css">
+<body>
+    <div id="page_container" class="column">
+        <div id="container" class="column is-align-midst">
+            <main class="contents">
+                <div class="contents-top row is-align-center">
+                    <img src="/images/icon_logo.png" alt="로고 이미지" width="50" height="50">
+                </div>
+                <form id="registerForm" class="form">
+                    <div class="field is-grouped">
+                        <div class="field">
+                            <label for="name" class="label">이름</label>
+                            <span class="input">
+                                <input type="text" name="name" id="name" class="box" autofocus>
+                                <i class="icon"></i>
+                            </span>
+                            <small class="field-message"></small>
+                        </div>
+                        <div class="field">
+                            <label for="id" class="label">아이디</label>
+                            <p class="has-text-help">4~20자의 영문과 숫자 조합</p>
+                            <div class="has-addons">
+                                <span class="input">
+                                    <input type="text" name="userId" id="id" class="box">
+                                    <i class="icon"></i>
+                                </span>
+                                <span class="button is-primary">
+                                    <button type="button" id="confirmIdBtn" class="box">중복 확인</button>
+                                </span>
+                            </div>
+                            <small class="field-message"></small>
+                        </div>
+                        <div class="field">
+                            <label for="email" class="label">이메일</label>
+                            <div class="has-addons">
+                                <span class="input">
+                                    <input type="text" name="email" id="email" class="box">
+                                    <i class="icon"></i>
+                                </span>
+                                <span class="button is-primary">
+                                    <button type="button" id="confirmEmailBtn" class="box">중복 확인</button>
+                                </span>
+                            </div>
+                            <small class="field-message"></small>
+                        </div>
+                        <div class="field">
+                            <label for="password" class="label">비밀번호</label>
+                            <p class="has-text-help">8~16자의 영문과 숫자, 특수 문자 조합</p>
+                            <span class="input">
+                                <input type="password" name="password" id="password" class="box" autocomplete="off">
+                                <i class="icon"></i>
+                            </span>
+                            <small class="field-message"></small>
+                        </div>
+                        <div class="field">
+                            <label for="passwordConfirm" class="label">비밀번호 확인</label>
+                            <span class="input">
+                                <input type="password" name="passwordConfirm" id="passwordConfirm" class="box" autocomplete="off">
+                                <i class="icon"></i>
+                            </span>
+                            <small class="field-message"></small>
+                        </div>
+                    </div>
+                    <div class="field is-grouped">
+                        <div class="field">
+                            <span class="button is-primary">
+                                <button type="button" id="registerBtn" class="box">가입하기</button>
+                            </span>
+                        </div>
+                        <div class="field">
+                            <span class="has-text-link">
+                                이미 계정을 가지고 있으시다면? <a href="/" role="link" class="is-text-link">로그인</a>
+                            </span>
+                        </div>
+                    </div>
+                    <hr class="hr">
+                    <div class="field is-grouped">
+                        <div class="field">
+                            <span class="button is-kakao has-social-icon">
+                                <button type="button" id="kakaoBtn" class="box">카카오 계정으로 가입하기</button>
+                            </span>
+                        </div>
+                        <div class="field">
+                            <span class="button is-google has-social-icon">
+                                <button type="button" id="googleBtn" class="box">구글 계정으로 가입하기</button>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

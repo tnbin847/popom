@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+
+.contents:has(#loginForm) {
+    width: 340px;
+}
+
+
+.contents:has(#registerForm) {
+    width: 380px;
+}
+
+#registerForm {
+    & .field > .has-addons {
+        & > .input {
+            width: 100%;
+            margin-right: var(--space-xxs);
+        }
+
+        & > .button {
+            width: 104px;
+        }
+    }
+}

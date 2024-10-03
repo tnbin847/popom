@@ -1,1 +1,88 @@
 @charset "utf-8";
+
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/Pretendard-Regular.woff2') format('woff2'),
+         url('/fonts/Pretendard-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard-Medium';
+    font-weight: 500;
+    font-display: swap;
+    src: url('/fonts/Pretendard-Medium.woff2') format('woff2'),
+         url('/fonts/Pretendard-Medium.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Montserrat-Black';
+	font-weight: 900;
+	font-display: swap;
+	src: url('/fonts/Montserrat-Black.woff2') format('woff2'),
+         url('/fonts/Montserrat-Black.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'GmarketSans-Medium';
+    font-weight: 500;
+    font-display: swap;
+    src: url('/fonts/GmarketSans-Medium.woff2') format('woff2'),
+         url('/fonts/GmarketSans-Medium.woff') format('woff');
+}
+
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Pretendard-Regular', sans-serif;
+    font-size: var(--text-base);
+    font-weight: 600;
+}
+
+
+.has-text-help {
+    margin-bottom: var(--space-xxs);
+    color: var(--gray);
+    font-size: var(--text-sm);
+}
+
+.has-text-link {
+    display: block;
+    text-align: center;
+    color: var(--gray);
+
+    & > a[role='link'] {
+        margin: 0 var(--space-sm);
+
+        &:first-child { 
+            margin-left: 0; 
+        }
+        
+        &:last-child { 
+            margin-right: 0; 
+        }
+    }
+}
+
+
+.hr {
+    height: 1px;
+    border: none;
+    background-color: var(--border-color);
+}
+
+
+.is-text-primary {
+    color: var(--primary-color);
+}
+
+.is-text-secondary {
+    color: var(--secondary-color);
+}
+
+.is-text-link {
+    color: var(--link-color);
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tnbin.popom.domain.user.mapper.UserMapper">
+    <!-- 동일 아이디의 총 개수 조회 -->
+    <select id="selectCountByUserId" parameterType="String" resultType="Integer">
+        <![CDATA[
+            SELECT COUNT(user_id) FROM users WHERE user_id = #{userId}
+        ]]>
+    </select>
+
+    <!-- 동일 이메일의 총 개수 조회 -->
+    <select id="selectCountByEmail" parameterType="String" resultType="Integer">
+        <![CDATA[
+            SELECT COUNT(email) FROM users WHERE email = #{email}
+        ]]>
+    </select>
+
+    <!-- 회원가입 정보 등록 -->
+    <insert id="insertUser" parameterType="SignUpRequest" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+        INSERT INTO users (
+            name, user_id, email, password, login_type, enabled, updated_date
+        ) VALUES (
+            #{name}, #{userId}, #{email}, #{password}, #{loginType}, #{enabled}, NOW()
+        )
+    </insert>
+
+    <!-- 가입된 계정에게 부여될 권한 코드 등록 -->
+    <insert id="insertUserRole" parameterType="UserRoleRegister">
+        INSERT INTO user_roles (
+            u_id, role, used_at, created_date, updated_date
+        ) VALUES (
+            #{uId}, #{role}, #{usedAt}, #{createdDate}, #{updatedDate}
+        )
+    </insert>
+</mapper>

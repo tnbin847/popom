@@ -23,3 +23,21 @@ spring:
       static-locations:
         - file:src/main/resources/static/
 
+mybatis:
+  # 런타임시 마이바티스의 동작 제어 설정
+  configuration:
+    cache-enabled: false
+    lazy-loading-enabled: false
+    map-underscore-to-camel-case: true
+    call-setters-on-nulls: true
+    jdbc-type-for-null: NULL
+  # 매퍼 파일의 자바 클래스 매핑시 패키지명 생략을 위한 별칭(Alias) 설정
+  type-aliases-package: com.tnbin.popom.domain.**.dto
+  # 별도 구현한 타입 핸들러를 등록하기 위해 핸들러 클래스의 패키지 설정
+  type-handlers-package: com.tnbin.popom.global.common.mybatis
+  # 매퍼 XML 파일 경로 설정
+  mapper-locations:
+    - classpath:mapper/*_mapper.xml
+    - classpath:mapper/**/*_mapper.xml
+
+

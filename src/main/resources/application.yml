@@ -1,0 +1,25 @@
+server:
+  # 내장 톰캣 번호 변경
+  port: 9000
+  servlet:
+    # HTTP 요청 및 응답의 문자셋 인코딩 설정
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+spring:
+  main:
+    # 런타임시 출력되는 배너 끄기
+    banner-mode: OFF
+  # 타임리프 설정 : 웹 브라우저 새로고침을 통한 화면단 변경 내용 반영을 위해 경로 및 캐시값 설정
+  thymeleaf:
+    prefix: file:src/main/resources/templates/
+    suffix: .html
+    cache: false
+  # 정적 리소스 설정 : 웹 브라우저 새로고침을 통한 화면단 변경 내용 반영을 위해 경로 설정
+  web:
+    resources:
+      static-locations:
+        - file:src/main/resources/static/
+
